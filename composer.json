@@ -1,6 +1,6 @@
 {
-    "name": "univeros/configuration",
-    "description": "The Altair Configuration package.",
+    "name": "univeros/courier",
+    "description": "The Altair Courier package.",
     "license": "MIT",
     "homepage": "https://univeros.io",
     "support": {
@@ -9,14 +9,15 @@
     },
     "require": {
         "php": ">=7.0.0",
+        "psr/log": "~1.0",
+        "univeros/configuration": "*",
         "univeros/container": "*",
         "univeros/filesystem": "*",
-        "univeros/structure": "*",
-        "psr/log": "~1.0"
+        "univeros/structure": "*"
     },
     "autoload": {
         "psr-4": {
-            "Altair\\Configuration\\": ""
+            "Altair\\Courier\\": ""
         }
     },
     "minimum-stability": "dev"
