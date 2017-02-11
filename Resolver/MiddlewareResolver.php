@@ -2,6 +2,7 @@
 namespace Altair\Courier\Resolver;
 
 use Altair\Container\Container;
+use Altair\Courier\Contracts\CommandMiddlewareInterface;
 use Altair\Courier\Contracts\MiddlewareResolverInterface;
 
 class MiddlewareResolver implements MiddlewareResolverInterface
@@ -26,9 +27,9 @@ class MiddlewareResolver implements MiddlewareResolverInterface
      *
      * @param string|object $entry
      *
-     * @return object
+     * @return CommandMiddlewareInterface
      */
-    public function __invoke($entry)
+    public function __invoke($entry): CommandMiddlewareInterface
     {
         if (is_object($entry)) {
             return $entry;
